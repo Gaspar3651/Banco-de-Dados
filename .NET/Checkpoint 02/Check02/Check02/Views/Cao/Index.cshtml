@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Check02.Models.MdCao>
+
+@{
+    ViewBag.Title = "Cão";
+}
+
+<h2>Cão</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo Cão", "Create")
+</p>
+<table class="table"> 
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NmCao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NmRaca)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NmCao)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NmRaca)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.IdCao }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = item.IdCao }) |
+        @Html.ActionLink("Excluir", "Delete", new { id = item.IdCao })
+    </td>
+</tr>
+}
+
+</table>

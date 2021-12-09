@@ -1,0 +1,43 @@
+﻿@model Check02.Models.MdDono
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <h4>Dono</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.NmDono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmDono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nascimento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdDono }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
